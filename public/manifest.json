@@ -1,0 +1,21 @@
+{
+  "name": "Dr. Rafael Cort\u00e9s \u2013 Electroterapia",
+  "short_name": "Dr. Cort\u00e9s",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
