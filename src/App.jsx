@@ -28,7 +28,7 @@ function App() {
         <div className="flex justify-center">
           <iframe
             title="Ubicación del consultorio"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8703533960253!2d-74.06282748573706!3d4.655451596642057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3df1d8d6e3%3A0xf083c8a6f0890d82!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1718660000000"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d497.09331669067194!2d-74.07822106623846!3d4.639243761881468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sco!4v1750535213861!5m2!1sen!2sco"
             width="100%"
             height="400"
             allowFullScreen=""
