@@ -22,6 +22,8 @@ export default function App() {
           <li><a href="#inicio" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Inicio</a></li>
           <li><a href="#especialidades" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Especialidades</a></li>
           <li><a href="#experiencia" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Experiencia</a></li>
+          <li><a href="#galeria" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Galería</a></li>
+          <li><a href="#ubicacion" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Ubicación</a></li>
           <li><a href="#contacto" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Contacto</a></li>
           <li>
             <button 
@@ -108,7 +110,44 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer */}
+      {
+      {/* Ubicación */}
+      <section id="ubicacion" className="bg-white dark:bg-gray-900 py-20 px-6 md:px-20 transition-colors duration-300">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800 dark:text-white">¿Dónde nos encontramos?</h2>
+        <p className="text-center mb-8 text-gray-600 dark:text-gray-300 text-lg">
+          El consultorio del Dr. Rafael Cortés está ubicado en Bogotá, Colombia.<br />
+          <span className="font-semibold text-red-600 dark:text-red-400">Se atiende únicamente con cita previa.</span>
+        </p>
+        <div className="flex justify-center">
+          <iframe
+            title="Ubicación del consultorio"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8703533960253!2d-74.06282748573706!3d4.655451596642057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3df1d8d6e3%3A0xf083c8a6f0890d82!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1718660000000"
+            width="100%"
+            height="400"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-lg shadow-lg w-full max-w-4xl"
+          ></iframe>
+        </div>
+      </section>
+
+
+      {/* Galería */}
+      <section id="galeria" className="bg-gray-50 dark:bg-gray-800 py-20 px-6 md:px-20 transition-colors duration-300">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800 dark:text-white">Nuestro Consultorio</h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto text-lg">
+          Nuestro espacio está diseñado para brindar comodidad, privacidad y atención de calidad. Cada detalle ha sido pensado para ofrecer una experiencia médica profesional y cercana.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <img src="/consultorio1.jpg" alt="Consultorio 1" className="rounded-lg shadow-md" />
+          <img src="/consultorio2.jpg" alt="Consultorio 2" className="rounded-lg shadow-md" />
+          <img src="/consultorio3.jpg" alt="Consultorio 3" className="rounded-lg shadow-md" />
+        </div>
+      </section>
+
+
+      /* Footer */}
       <footer id="contacto" className="bg-blue-900 text-white px-6 md:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
           <div className="space-y-3">
@@ -121,7 +160,9 @@ export default function App() {
               <li><a href="#inicio" className="hover:text-blue-300 transition-colors duration-300">Inicio</a></li>
               <li><a href="#especialidades" className="hover:text-blue-300 transition-colors duration-300">Especialidades</a></li>
               <li><a href="#experiencia" className="hover:text-blue-300 transition-colors duration-300">Experiencia</a></li>
-              <li><a href="#contacto" className="hover:text-blue-300 transition-colors duration-300">Contacto</a></li>
+              <li><a href="#galeria" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Galería</a></li>
+          <li><a href="#ubicacion" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400">Ubicación</a></li>
+          <li><a href="#contacto" className="hover:text-blue-300 transition-colors duration-300">Contacto</a></li>
             </ul>
           </div>
           <div className="space-y-3">
