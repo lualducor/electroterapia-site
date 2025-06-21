@@ -127,9 +127,9 @@ export default function App() {
             <div className="rounded-lg shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700">
               <iframe
                 title="Ubicación del consultorio"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8703533960253!2d-74.06282748573706!3d4.655451596642057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3df1d8d6e3%3A0xf083c8a6f0890d82!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1718660000000"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.5466674720002!2d-74.07819023949948!3d4.639217834845287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sco!4v1750536927146!5m2!1sen!2sco"
                 width="100%"
-                height="400"
+                height="450"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
