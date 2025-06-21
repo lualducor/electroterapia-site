@@ -34,17 +34,20 @@ export default function App() {
         </ul>
       </nav>
 
+      
       {/* Hero */}
-      <section id="inicio" className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 pt-28 md:pt-32 pb-12 bg-blue-50 dark:bg-gray-800 transition-colors duration-300">
-        <div className="md:w-1/2 text-center md:text-left space-y-8">
+      <section id="inicio" className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center px-6 md:px-20 pt-28 md:pt-32 pb-12 bg-blue-50 dark:bg-gray-800 transition-colors duration-300">
+        <div className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Consulta Médica <br />
-            <span className="text-blue-600 dark:text-blue-400">Especializada en Electroterapia!</span>
+            <span className="block sm:inline">Consulta Médica</span><br />
+            <span className="block sm:inline text-blue-600 dark:text-blue-400">
+              Especializada en <span className="whitespace-nowrap">Electroterapia!</span>
+            </span>
           </h1>
           <p className="text-lg md:text-xl dark:text-gray-300">
             El Dr. Rafael Cortés brinda atención personalizada para aliviar el dolor, mejorar la movilidad y recuperar tu bienestar.
           </p>
-          <div className="flex justify-center md:justify-start gap-4">
+          <div className="mt-6 flex justify-center lg:justify-start">
             <a
               href="https://wa.me/573157862547?text=Hola%20doctor%20Rafael%2C%20quiero%20agendar%20una%20consulta"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300"
@@ -52,12 +55,9 @@ export default function App() {
               Agenda tu cita
             </a>
           </div>
-          <div className="mt-10 flex justify-center animate-bounce">
-            <span className="text-blue-600 dark:text-blue-400 text-xl">⬇️</span>
-          </div>
         </div>
-        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img src="/doctor_main.jpg" alt="Doctor Rafael Cortés" className="w-full max-w-xs md:max-w-sm rounded-lg shadow-lg" />
+        <div className="lg:w-1/2 flex justify-center mb-12 lg:mb-0">
+          <img src="/doctor_main.jpg" alt="Doctor Rafael Cortés" className="w-full max-w-md md:max-w-lg rounded-lg shadow-lg" />
         </div>
       </section>
 
