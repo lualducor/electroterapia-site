@@ -17,6 +17,7 @@ export default function App() {
           <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700 dark:text-gray-300">
             <a href="#experiencia" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experiencia</a>
             <a href="#especialidades" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Especialidades</a>
+            <a href="#galeria" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Galería</a>
             <a href="#contacto" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contacto</a>
           </nav>
           <button
@@ -101,36 +102,42 @@ export default function App() {
           </div>
         </section>
 
-        {/* Galería & Ubicación */}
-        <section id="contacto" className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900 transition-colors duration-300">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2">Consultorio</h3>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Un Espacio Cómodo y Profesional</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <img src="/consultorio1.jpg" alt="Consultorio 1" className="rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300" />
-                <img src="/consultorio2.jpg" alt="Consultorio 2" className="rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300" />
-                <img src="/consultorio3.jpg" alt="Consultorio 3" className="rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300" />
-              </div>
+        {/* Galería */}
+        <section id="galeria" className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900">
+          <div className="max-w-5xl mx-auto text-center">
+            <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2">Consultorio</h3>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Un Espacio Cómodo y Profesional</h2>
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+              Nuestro espacio está diseñado para brindar comodidad, privacidad y atención de calidad, asegurando una experiencia médica profesional y cercana.
+            </p>
+            <div className="flex justify-center">
+              <img src="/consultorio2.jpg" alt="Consultorio del Dr. Rafael Cortés" className="rounded-lg shadow-2xl max-w-full h-auto transform hover:scale-105 transition-transform duration-300" />
             </div>
-            <div>
-              <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2">Ubicación</h3>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Encuéntranos en Bogotá</h2>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                El consultorio está convenientemente ubicado en Bogotá. <span className="font-semibold text-red-600 dark:text-red-400">La atención es únicamente con cita previa</span> para garantizar una dedicación completa a cada paciente.
-              </p>
-              <div className="rounded-lg shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                <iframe
-                  title="Ubicación del consultorio"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8703533960253!2d-74.06282748573706!3d4.655451596642057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3df1d8d6e3%3A0xf083c8a6f0890d82!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1718660000000"
-                  width="100%"
-                  height="300"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+          </div>
+        </section>
+        
+        {/* Ubicación y Contacto */}
+        <section id="contacto" className="py-20 px-6 md:px-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+          <div className="max-w-5xl mx-auto text-center">
+            <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2">Ubicación</h3>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Encuéntranos en Bogotá</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+              El consultorio está convenientemente ubicado para tu fácil acceso.
+            </p>
+            <div className="rounded-lg shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+              <iframe
+                title="Ubicación del consultorio"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8703533960253!2d-74.06282748573706!3d4.655451596642057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3df1d8d6e3%3A0xf083c8a6f0890d82!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1718660000000"
+                width="100%"
+                height="400"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
+            <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
+              <span className="font-semibold text-red-600 dark:text-red-400">La atención es únicamente con cita previa</span> para garantizar una dedicación completa a cada paciente.
+            </p>
           </div>
         </section>
       </main>
@@ -148,6 +155,7 @@ export default function App() {
               <li><a href="#inicio" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Inicio</a></li>
               <li><a href="#experiencia" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experiencia</a></li>
               <li><a href="#especialidades" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Especialidades</a></li>
+              <li><a href="#galeria" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Galería</a></li>
               <li><a href="#contacto" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contacto</a></li>
             </ul>
           </div>
