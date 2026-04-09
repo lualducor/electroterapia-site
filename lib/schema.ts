@@ -31,7 +31,10 @@ export function localBusinessSchema(): JsonLd {
     openingHours: 'Mo-Fr 09:00-17:00',
     medicalSpecialty: 'PhysicalMedicine',
     hasMap: business.maps,
-    sameAs: [business.maps],
+    sameAs: [
+      business.maps,
+      'https://www.doctoralia.co/franco-rafael-francisco-cortes/medico-general/bogota',
+    ],
   };
 }
 
@@ -67,5 +70,8 @@ export function personSchema(): JsonLd {
     ],
     worksFor: { '@id': business.domain },
     url: business.domain,
+    sameAs: [
+      'https://www.doctoralia.co/franco-rafael-francisco-cortes/medico-general/bogota',
+    ],
   };
 }
