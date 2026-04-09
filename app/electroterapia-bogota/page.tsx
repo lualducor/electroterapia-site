@@ -6,7 +6,7 @@ import { serviceFaqs as faqs } from '@/lib/faqs';
 import TrustBlock from '@/components/sections/TrustBlock';
 
 export const metadata: Metadata = {
-  title: 'Electroterapia en Bogotá | Dr. Rafael Cortés – Tratamiento del dolor',
+  title: { absolute: 'Electroterapia en Bogotá | Tratamiento del dolor – Dr. Rafael Cortés' },
   description:
     'Consulta médica en electroterapia en Bogotá para el manejo del dolor lumbar, cervical, muscular y rehabilitación funcional. Agenda tu cita con el Dr. Rafael Cortés.',
   alternates: {
@@ -188,6 +188,30 @@ export default function ElectroterapiaBogota() {
             },
             medicalSpecialty: 'PhysicalMedicine',
             areaServed: { '@type': 'City', name: 'Bogotá' },
+          }),
+        }}
+      />
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Inicio',
+                item: business.domain,
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Electroterapia en Bogotá',
+                item: `${business.domain}/electroterapia-bogota`,
+              },
+            ],
           }),
         }}
       />
@@ -599,7 +623,54 @@ export default function ElectroterapiaBogota() {
           </div>
         </section>
 
-        {/* ── H. FAQ ───────────────────────────────────────────────────────── */}
+        {/* ── H. WHY DR. CORTÉS ────────────────────────────────────────────── */}
+        <section
+          className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900"
+          aria-labelledby="why-heading"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                Su elección importa
+              </p>
+              <h2
+                id="why-heading"
+                className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
+              >
+                ¿Por qué elegir al Dr. Cortés?
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              <p>
+                Con más de <strong className="text-slate-800 dark:text-slate-200">30 años de experiencia clínica</strong> en
+                medicina física y rehabilitación, el Dr. Rafael Cortés ofrece un enfoque médico riguroso que va más
+                allá de la aplicación de equipos. Cada tratamiento comienza con una valoración diagnóstica completa
+                para identificar el origen del dolor y descartar contraindicaciones.
+              </p>
+              <p>
+                Su formación como <strong className="text-slate-800 dark:text-slate-200">Médico Cirujano de la Universidad
+                Nacional de Colombia</strong> —la universidad pública de mayor prestigio del país— respalda un ejercicio
+                clínico basado en evidencia científica actualizada. Los tratamientos no son invasivos, no generan
+                dependencia y se adaptan a la condición específica de cada paciente.
+              </p>
+              <p>
+                El consultorio está ubicado en el sector de{' '}
+                <strong className="text-slate-800 dark:text-slate-200">Teusaquillo / Galerías</strong>, una zona central
+                y de fácil acceso en Bogotá. La atención es{' '}
+                <strong className="text-slate-800 dark:text-slate-200">exclusivamente particular (medicina privada)</strong>{' '}
+                y solo con cita previa, lo que garantiza dedicación completa durante cada consulta.
+              </p>
+              <p>
+                Si usted lleva meses conviviendo con el dolor, ha probado medicamentos sin resultados definitivos o
+                está en proceso de rehabilitación tras una cirugía, esta consulta está diseñada para usted.
+                La electroterapia no sustituye el diagnóstico médico: lo complementa con tecnología clínica de precisión.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── I. FAQ ───────────────────────────────────────────────────────── */}
         <section
           className="py-20 px-6 md:px-20 bg-slate-50 dark:bg-gray-800"
           aria-labelledby="faq-heading"
@@ -640,7 +711,7 @@ export default function ElectroterapiaBogota() {
           </div>
         </section>
 
-        {/* ── I. FINAL CTA ──────────────────────────────────────────────────── */}
+        {/* ── J. FINAL CTA ──────────────────────────────────────────────────── */}
         <section
           className="py-24 px-6 md:px-20 bg-gradient-to-br from-slate-900 via-cyan-950 to-slate-800 text-white text-center relative overflow-hidden"
           aria-label="Llamada a la acción final"

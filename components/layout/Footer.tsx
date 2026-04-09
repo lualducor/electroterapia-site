@@ -37,8 +37,16 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bg-gray-200 dark:bg-gray-900 py-4 text-center text-xs text-gray-600 dark:text-gray-400">
-        Copyright © {new Date().getFullYear()} Rafael Cortés. Todos los derechos reservados.
+      <div className="bg-gray-200 dark:bg-gray-900 py-4 px-6 text-center text-xs text-gray-600 dark:text-gray-400 space-y-1">
+        <p className="italic">
+          La información de este sitio es de carácter informativo y no reemplaza la consulta médica presencial.
+        </p>
+        <p>
+          Copyright © {new Date().getFullYear()} Rafael Cortés. Todos los derechos reservados.{' '}
+          <a href="/privacidad" className="underline hover:text-cyan-600 transition-colors">
+            Política de Privacidad
+          </a>
+        </p>
       </div>
     </footer>
   );

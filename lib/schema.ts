@@ -34,3 +34,38 @@ export function localBusinessSchema(): JsonLd {
     sameAs: [business.maps],
   };
 }
+
+export function websiteSchema(): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${business.domain}/#website`,
+    url: business.domain,
+    name: 'Dr. Rafael Cortés – Electroterapia Bogotá',
+    inLanguage: 'es-CO',
+    publisher: { '@id': business.domain },
+  };
+}
+
+export function personSchema(): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${business.domain}/#doctor`,
+    name: 'Dr. Rafael Cortés',
+    jobTitle: 'Médico Cirujano – Medicina Física y Rehabilitación',
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Universidad Nacional de Colombia',
+    },
+    knowsAbout: [
+      'Electroterapia',
+      'Medicina Física y Rehabilitación',
+      'Manejo del dolor crónico',
+      'Rehabilitación músculo-esquelética',
+      'Estimulación neuromuscular',
+    ],
+    worksFor: { '@id': business.domain },
+    url: business.domain,
+  };
+}

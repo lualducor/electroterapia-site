@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { localBusinessSchema } from '@/lib/schema';
+import { localBusinessSchema, websiteSchema, personSchema } from '@/lib/schema';
+import { homepageFaqs } from '@/lib/faqs';
 import Hero from '@/components/sections/Hero';
 import TrustBlock from '@/components/sections/TrustBlock';
 import Experience from '@/components/sections/Experience';
@@ -49,11 +50,74 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: homepageFaqs.map(({ question, answer }) => ({
+              '@type': 'Question',
+              name: question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: answer,
+              },
+            })),
+          }),
+        }}
+      />
       <main>
         <Hero />
         <TrustBlock />
         <Experience />
         <Specialties />
+        {/* About the Doctor */}
+        <section className="py-16 px-6 md:px-20 bg-slate-50 dark:bg-gray-800" aria-labelledby="about-heading">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                Médico especialista
+              </p>
+              <h2
+                id="about-heading"
+                className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
+              >
+                Acerca del Dr. Rafael Cortés
+              </h2>
+            </div>
+            <div className="space-y-5 text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              <p>
+                El <strong className="text-slate-800 dark:text-slate-200">Dr. Rafael Cortés</strong> es Médico Cirujano
+                egresado de la <strong className="text-slate-800 dark:text-slate-200">Universidad Nacional de Colombia</strong>,
+                con más de <strong className="text-slate-800 dark:text-slate-200">30 años de experiencia clínica</strong> en
+                electroterapia, medicina física y rehabilitación.
+              </p>
+              <p>
+                Su consulta está especializada en el manejo del dolor crónico y agudo, la rehabilitación
+                músculo-esquelética y la recuperación funcional de pacientes que no han encontrado alivio suficiente
+                con otros tratamientos. Aplica corrientes de baja y media frecuencia con protocolos personalizados
+                y respaldados por evidencia científica.
+              </p>
+              <p>
+                El consultorio está ubicado en el sector de{' '}
+                <strong className="text-slate-800 dark:text-slate-200">Teusaquillo / Galerías</strong>, en el centro
+                de Bogotá. La atención es exclusivamente particular (medicina privada) y solo con cita previa,
+                lo que permite dedicar tiempo completo a cada paciente desde la primera valoración.
+              </p>
+              {/* TODO: Add tarjeta profesional / RETHUS number once available */}
+            </div>
+          </div>
+        </section>
+
         <div className="bg-white dark:bg-gray-900 text-center py-4 border-t border-gray-100 dark:border-gray-800">
           <Link
             href="/electroterapia-bogota"
