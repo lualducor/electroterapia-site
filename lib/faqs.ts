@@ -45,6 +45,26 @@ export const homepageFaqs: Faq[] = [
     answer:
       'Sí. El dolor muscular post-entrenamiento —agujetas, sobrecarga y micro-desgarros— responde muy bien a la electroterapia. El tratamiento reduce la inflamación, relaja la musculatura y acelera la recuperación para que pueda retomar su actividad física antes.',
   },
+  {
+    question: '¿Sirve para el dolor de hombro o el manguito rotador?',
+    answer:
+      'Sí. El dolor de hombro por lesión del manguito rotador, bursitis o hombro congelado (capsulitis adhesiva) es una de las condiciones que se trata con electroterapia. Ayuda a reducir la inflamación, aliviar el dolor y recuperar el rango de movimiento sin cirugía.',
+  },
+  {
+    question: '¿La electroterapia ayuda con el dolor de rodilla?',
+    answer:
+      'Sí. El dolor de rodilla por condromalacia, bursitis, artritis o desgaste del cartílago responde bien a la electroterapia. El tratamiento reduce la inflamación articular, alivia el dolor y mejora la movilidad de forma no invasiva.',
+  },
+  {
+    question: '¿Trata el codo de tenista o epicondilitis?',
+    answer:
+      'Sí. La epicondilitis lateral (codo de tenista) y medial (codo de golfista) son condiciones frecuentes causadas por sobreesfuerzo del antebrazo. La electroterapia reduce la inflamación del tendón y alivia el dolor en el codo de forma efectiva.',
+  },
+  {
+    question: '¿Qué hago si tengo dolor en el talón o fascitis plantar?',
+    answer:
+      'La fascitis plantar —ese dolor en el talón que es peor al levantarse por la mañana— es una condición que se puede tratar con electroterapia. Ayuda a reducir la inflamación del tejido plantar y el dolor al caminar o estar de pie.',
+  },
 ];
 
 /**
@@ -93,5 +113,40 @@ export const serviceFaqs: Faq[] = [
     question: '¿Sirve para el dolor muscular después del ejercicio o del gimnasio?',
     answer:
       'Sí. El dolor muscular post-entrenamiento —agujetas, sobrecarga muscular y micro-desgarros— es una de las condiciones que trata el Dr. Cortés. La electroterapia acelera la recuperación muscular, reduce la inflamación y alivia el dolor sin necesidad de medicamentos, ayudando a retomar la actividad física más rápido.',
+  },
+  {
+    question: '¿Trata el dolor de hombro, manguito rotador o hombro congelado?',
+    answer:
+      'Sí. El dolor de hombro por bursitis, lesión del manguito rotador o capsulitis adhesiva (hombro congelado) es una indicación frecuente. La electroterapia reduce la inflamación, alivia el dolor y ayuda a recuperar el movimiento del hombro de forma progresiva.',
+  },
+  {
+    question: '¿Sirve para el dolor de rodilla (condromalacia, bursitis, artritis)?',
+    answer:
+      'Sí. El dolor de rodilla por desgaste del cartílago, bursitis o artritis responde bien a la electroterapia. Reduce la inflamación articular, controla el dolor y mejora la movilidad sin necesidad de procedimientos invasivos.',
+  },
+  {
+    question: '¿Trata el codo de tenista (epicondilitis) o el codo de golfista?',
+    answer:
+      'Sí. La epicondilitis lateral e medial son condiciones frecuentes en personas que hacen movimientos repetitivos con el brazo —ya sea en deporte, trabajo de oficina o labores manuales. La electroterapia reduce la inflamación del tendón y alivia el dolor en el codo.',
+  },
+  {
+    question: '¿Qué hago si tengo fascitis plantar o dolor en el talón?',
+    answer:
+      'La fascitis plantar —ese dolor intenso en el talón, especialmente al dar los primeros pasos en la mañana— responde bien a la electroterapia. Reduce la inflamación del tejido plantar y alivia el dolor al caminar o estar de pie por largos periodos.',
+  },
+  {
+    question: '¿La electroterapia ayuda con la tortícolis o el cuello rígido?',
+    answer:
+      'Sí. La tortícolis y la rigidez cervical aguda —ese dolor que impide girar o inclinar el cuello— es una de las condiciones que se trata. Las corrientes relajan la musculatura cervical, reducen el espasmo y recuperan el rango de movimiento.',
+  },
+  {
+    question: '¿Se puede tratar la fibromialgia con electroterapia?',
+    answer:
+      'La electroterapia puede ser un componente del manejo del dolor en pacientes con fibromialgia, ayudando a reducir los puntos de dolor muscular difuso y mejorar la calidad de vida. El Dr. Cortés evalúa cada caso para determinar si es una opción adecuada.',
+  },
+  {
+    question: '¿Trata la distensión muscular o los calambres frecuentes?',
+    answer:
+      'Sí. La distensión muscular —por un movimiento brusco o sobreesfuerzo— y los calambres musculares recurrentes son condiciones que se benefician de la electroterapia. Ayuda a relajar el músculo, reducir la tensión residual y prevenir nuevos episodios.',
   },
 ];
