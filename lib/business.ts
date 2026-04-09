@@ -7,6 +7,7 @@ export type Business = {
   whatsapp: string;
   whatsappBooking: string;
   whatsappInfo: string;
+  maps: string;
   email: string;
   domain: string;
   sector: string;
@@ -22,6 +23,7 @@ export const business: Business = {
   whatsapp: 'https://wa.me/573157862547',
   whatsappBooking: 'https://wa.me/573157862547?text=Hola%20doctor%20Rafael%2C%20quiero%20agendar%20una%20consulta',
   whatsappInfo: 'https://wa.me/573157862547?text=Hola%20doctor%20Rafael%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20los%20tratamientos',
+  maps: 'https://www.google.com/maps?cid=12747777258673677292',
   email: 'contacto@rafaelcortes.co',
   domain: 'https://electroterapia.co',
   sector: 'Teusaquillo / Galerías',

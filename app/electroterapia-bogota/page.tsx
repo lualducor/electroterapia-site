@@ -584,7 +584,7 @@ export default function ElectroterapiaBogota() {
                 />
               </div>
               <a
-                href="https://www.google.com/maps?q=4.639217834845287,-74.07819023949948"
+                href={business.maps}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 text-sm font-medium text-cyan-700 dark:text-cyan-400 hover:text-cyan-900 dark:hover:text-cyan-200 border border-cyan-200 dark:border-cyan-800 rounded-xl px-4 py-2.5 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition-colors duration-200 cursor-pointer"

@@ -24,7 +24,7 @@ export default function Contact() {
               <p className="text-gray-700 dark:text-gray-300">{business.address}</p>
               <p className="text-gray-700 dark:text-gray-300">Sector {business.sector}, Bogotá</p>
               <a
-                href="https://www.google.com/maps?q=4.639217834845287,-74.07819023949948"
+                href={business.maps}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 mt-2 text-sm font-medium text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors"

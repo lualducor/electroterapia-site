@@ -30,5 +30,7 @@ export function localBusinessSchema(): JsonLd {
     },
     openingHours: 'Mo-Fr 09:00-17:00',
     medicalSpecialty: 'PhysicalMedicine',
+    hasMap: business.maps,
+    sameAs: [business.maps],
   };
 }
