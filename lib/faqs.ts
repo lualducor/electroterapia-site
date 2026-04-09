@@ -25,6 +25,21 @@ export const homepageFaqs: Faq[] = [
     answer:
       'Sí. Cuando es aplicada por un médico con experiencia clínica, la electroterapia es un procedimiento seguro y respaldado por evidencia médica. Antes de iniciar cualquier tratamiento, el Dr. Cortés realiza una evaluación completa de cada paciente.',
   },
+  {
+    question: '¿Sirve la electroterapia para dolores musculares y espasmos?',
+    answer:
+      'Sí. La electroterapia es muy efectiva para tratar contracturas musculares, espasmos y tensión acumulada en espalda, cuello, hombros y piernas. Las corrientes eléctricas relajan el músculo, reducen la inflamación y alivian el dolor de forma no invasiva.',
+  },
+  {
+    question: '¿Puedo recibir tratamiento si me torcí un tobillo o tengo un esguince?',
+    answer:
+      'Sí. Los esguinces y torceduras responden bien a la electroterapia en la fase de recuperación. El tratamiento ayuda a reducir la inflamación, controlar el dolor y acelerar la cicatrización del tejido lesionado. El Dr. Cortés evalúa el estado de la lesión antes de iniciar.',
+  },
+  {
+    question: '¿La electroterapia ayuda en la rehabilitación después de una cirugía?',
+    answer:
+      'Sí. La rehabilitación postoperatoria es una de las indicaciones más frecuentes. Después de cirugías ortopédicas, de rodilla, cadera, columna u otras intervenciones, la electroterapia acelera la recuperación funcional, reduce el dolor postquirúrgico y fortalece los músculos debilitados por el reposo.',
+  },
 ];
 
 /**
@@ -53,5 +68,20 @@ export const serviceFaqs: Faq[] = [
     question: '¿Cuándo se recomienda la electroterapia?',
     answer:
       'Se recomienda para el manejo del dolor crónico o agudo, recuperación de lesiones músculo-esqueléticas, rehabilitación postoperatoria, y en casos donde los medicamentos no han sido suficientes. El médico determina si es indicada según cada diagnóstico.',
+  },
+  {
+    question: '¿Sirve para dolores musculares, espasmos y contracturas?',
+    answer:
+      'Sí. Las contracturas, espasmos musculares y tensión crónica en espalda, cuello, hombros y pantorrillas son condiciones que responden muy bien a la electroterapia. El tratamiento relaja la musculatura, mejora la circulación local y reduce el dolor sin medicamentos.',
+  },
+  {
+    question: '¿Puedo atenderme si tengo un esguince o una torcedura reciente?',
+    answer:
+      'Sí, los esguinces son una indicación frecuente. La electroterapia ayuda a bajar la inflamación, controlar el dolor y recuperar la movilidad articular más rápido. El Dr. Cortés evalúa la fase de la lesión para definir el protocolo más adecuado.',
+  },
+  {
+    question: '¿La electroterapia hace parte de la rehabilitación post-cirugía?',
+    answer:
+      'Sí. Es ampliamente usada en recuperación postoperatoria de rodilla, cadera, columna y hombro. Ayuda a recuperar fuerza muscular, reducir el dolor postquirúrgico y volver a la actividad cotidiana de forma segura y progresiva.',
   },
 ];
