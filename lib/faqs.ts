@@ -40,6 +40,11 @@ export const homepageFaqs: Faq[] = [
     answer:
       'Sí. La rehabilitación postoperatoria es una de las indicaciones más frecuentes. Después de cirugías ortopédicas, de rodilla, cadera, columna u otras intervenciones, la electroterapia acelera la recuperación funcional, reduce el dolor postquirúrgico y fortalece los músculos debilitados por el reposo.',
   },
+  {
+    question: '¿Puedo tratar el dolor muscular después de entrenar o ir al gimnasio?',
+    answer:
+      'Sí. El dolor muscular post-entrenamiento —agujetas, sobrecarga y micro-desgarros— responde muy bien a la electroterapia. El tratamiento reduce la inflamación, relaja la musculatura y acelera la recuperación para que pueda retomar su actividad física antes.',
+  },
 ];
 
 /**
@@ -83,5 +88,10 @@ export const serviceFaqs: Faq[] = [
     question: '¿La electroterapia hace parte de la rehabilitación post-cirugía?',
     answer:
       'Sí. Es ampliamente usada en recuperación postoperatoria de rodilla, cadera, columna y hombro. Ayuda a recuperar fuerza muscular, reducir el dolor postquirúrgico y volver a la actividad cotidiana de forma segura y progresiva.',
+  },
+  {
+    question: '¿Sirve para el dolor muscular después del ejercicio o del gimnasio?',
+    answer:
+      'Sí. El dolor muscular post-entrenamiento —agujetas, sobrecarga muscular y micro-desgarros— es una de las condiciones que trata el Dr. Cortés. La electroterapia acelera la recuperación muscular, reduce la inflamación y alivia el dolor sin necesidad de medicamentos, ayudando a retomar la actividad física más rápido.',
   },
 ];

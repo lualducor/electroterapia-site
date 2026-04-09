@@ -75,6 +75,8 @@ export function personSchema(): JsonLd {
       'Rehabilitación post-cirugía',
       'Recuperación postoperatoria ortopédica',
       'Lesiones deportivas',
+      'Dolor muscular post-entrenamiento',
+      'Agujetas y sobrecarga muscular',
       'Parálisis facial',
       'Síndrome del túnel carpiano',
       'Estimulación neuromuscular',
