@@ -320,6 +320,7 @@ export default function ElectroterapiaBogota() {
                   src="/doctor_main.webp"
                   alt="Dr. Rafael Cortés, especialista en electroterapia en Bogotá"
                   fill
+                  sizes="420px"
                   className="object-cover object-top"
                   priority
                 />
@@ -412,6 +413,7 @@ export default function ElectroterapiaBogota() {
                 src="/electro1.webp"
                 alt="Paciente recibiendo tratamiento de electroterapia en Bogotá"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-transparent" />
