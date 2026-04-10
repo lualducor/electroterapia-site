@@ -35,7 +35,7 @@ export default function Specialties() {
       id="especialidades"
       className="py-20 px-6 md:px-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto">
+      <div data-reveal className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-cyan-600 dark:text-cyan-400 font-semibold text-lg mb-2">Especialidades</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Condiciones que tratamos</h2>
@@ -67,7 +67,7 @@ export default function Specialties() {
           {conditions.map((c) => (
             <div
               key={c.name}
-              className="bg-white dark:bg-gray-900 rounded-xl p-5 border-l-4 border-cyan-500 shadow-sm hover:shadow-md transition-shadow duration-200"
+              className="bg-white dark:bg-gray-900 rounded-xl p-5 border-l-4 border-cyan-500 dark:border-cyan-700 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{c.name}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{c.description}</p>
@@ -76,7 +76,7 @@ export default function Specialties() {
         </div>
 
         {/* CTA bridge */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-cyan-600 rounded-2xl px-8 py-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-cyan-600 dark:bg-cyan-700 rounded-2xl px-8 py-6">
           <p className="text-white font-semibold text-lg text-center sm:text-left">
             El Dr. Rafael Cortés diseña un plan personalizado para cada paciente.
           </p>

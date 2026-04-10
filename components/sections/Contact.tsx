@@ -6,7 +6,7 @@ export default function Contact() {
       id="contacto"
       className="py-20 px-6 md:px-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
     >
-      <div className="max-w-5xl mx-auto">
+      <div data-reveal className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-cyan-600 dark:text-cyan-400 font-semibold text-lg mb-2">Contacto y Ubicación</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Encuéntranos en Bogotá</h2>
@@ -64,7 +64,7 @@ export default function Contact() {
             </p>
           </div>
 
-          {/* Map */}
+          {/* Map – invert+hue-rotate makes Google Maps readable in dark mode */}
           <div className="rounded-lg shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700">
             <iframe
               title="Ubicación del consultorio Dr. Rafael Cortés"
@@ -74,6 +74,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="dark:[filter:invert(90%)_hue-rotate(180deg)] dark:opacity-90"
             />
           </div>
         </div>

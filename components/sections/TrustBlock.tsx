@@ -29,9 +29,12 @@ export default function TrustBlock() {
   return (
     <section
       aria-label="Credenciales del doctor"
-      className="py-10 px-6 md:px-20 bg-cyan-600 text-white"
+      className="py-10 px-6 md:px-20 bg-cyan-600 dark:bg-cyan-950 text-white transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 text-center">
+      <div
+        data-reveal
+        className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 text-center"
+      >
         {trustItems.map(({ label, icon }) => (
           <div key={label} className="flex flex-col items-center gap-2">
             <div>{icon}</div>

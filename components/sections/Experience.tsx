@@ -7,7 +7,7 @@ export default function Experience() {
       id="experiencia"
       className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div data-reveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="mb-8 md:mb-0 rounded-lg overflow-hidden shadow-xl">
           <Image
             src="/portrait2.webp"

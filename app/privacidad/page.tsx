@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/privacidad',
   },
-  robots: { index: true, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function Privacidad() {
   return (
     <main className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900 min-h-screen">
-      <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-headings:font-bold prose-a:text-cyan-600">
+      <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-headings:font-bold prose-a:text-cyan-600 dark:prose-a:text-cyan-400">
         <h1>Política de Privacidad y Tratamiento de Datos Personales</h1>
 
         <p className="text-sm text-slate-500 dark:text-slate-400">

@@ -29,9 +29,9 @@ export default function Footer() {
         <div className="space-y-4">
           <h3 className="font-bold text-lg text-gray-900 dark:text-white">Contacto</h3>
           <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-            <li>Teléfono: <a href={`tel:${business.phone.replace(/\s/g, '')}`} className="hover:text-cyan-600 transition-colors">{business.phone}</a></li>
-            <li>WhatsApp: <a href={business.whatsappBooking} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 transition-colors">Agendar cita</a></li>
-            <li>Email: {business.email}</li>
+            <li>Teléfono: <a href={`tel:${business.phone.replace(/\s/g, '')}`} className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{business.phone}</a></li>
+            <li>WhatsApp: <a href={business.whatsappBooking} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Agendar cita</a></li>
+            <li>Email: <a href={`mailto:${business.email}`} className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{business.email}</a></li>
             <li>{business.address}, {business.city}</li>
             <li>{business.hours}</li>
           </ul>

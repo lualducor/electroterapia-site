@@ -6,7 +6,7 @@ export default function WhatsAppFloat() {
       href={business.whatsappBooking}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+      className="fixed wa-float-safe z-50 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2"
       aria-label="Contactar al Dr. Rafael Cortés por WhatsApp"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7" aria-hidden="true">

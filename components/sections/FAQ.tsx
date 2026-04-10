@@ -7,19 +7,33 @@ export default function FAQ() {
       id="preguntas-frecuentes"
       className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
-      <div className="max-w-3xl mx-auto">
+      <div data-reveal className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-cyan-600 dark:text-cyan-400 font-semibold text-lg mb-2">Preguntas Frecuentes</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Lo que nuestros pacientes preguntan</h2>
         </div>
+
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
           {faqs.map(({ question, answer }) => (
-            <div key={question} className="py-6 first:pt-0 last:pb-0">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{question}</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{answer}</p>
-            </div>
+            <details key={question} className="group py-5 first:pt-0 last:pb-0">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-gray-900 dark:text-white">
+                {question}
+                <svg
+                  className="w-5 h-5 flex-shrink-0 text-cyan-600 dark:text-cyan-400 motion-safe:transition-transform motion-safe:duration-200 group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">{answer}</p>
+            </details>
           ))}
         </div>
+
         <div className="text-center mt-10">
           <a
             href={business.whatsappBooking}

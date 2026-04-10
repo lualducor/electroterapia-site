@@ -30,6 +30,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning className={`${figtree.variable} ${notoSans.variable}`}>
+      <head>
+        {/*
+          Blocking inline script — runs before first paint.
+          Reads localStorage then OS preference to set the `dark` class
+          on <html> with zero flash of unstyled content (FOUC).
+          suppressHydrationWarning on <html> silences the class mismatch
+          between server HTML (no dark class) and client hydration.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('darkMode');var d=s!==null?s==='true':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body className="antialiased">
         <AppShell>
           {children}

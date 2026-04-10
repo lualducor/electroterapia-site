@@ -343,7 +343,7 @@ export default function ElectroterapiaBogota() {
 
         {/* ── B. INTRO / VALUE PROP ────────────────────────────────────────── */}
         <section className="py-16 px-6 md:px-20 bg-white dark:bg-gray-900" aria-label="Propuesta de valor">
-          <div className="max-w-4xl mx-auto text-center">
+          <div data-reveal className="max-w-4xl mx-auto text-center">
             <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
               Consulta especializada en Bogotá
             </p>
@@ -364,7 +364,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-slate-50 dark:bg-gray-800"
           aria-labelledby="conditions-heading"
         >
-          <div className="max-w-7xl mx-auto">
+          <div data-reveal className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Patologías tratadas
@@ -384,7 +384,7 @@ export default function ElectroterapiaBogota() {
               {conditions.map((c) => (
                 <article
                   key={c.name}
-                  className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-slate-200 dark:border-gray-700 hover:border-cyan-400 dark:hover:border-cyan-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-default"
+                  className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-slate-200 dark:border-gray-700 hover:border-cyan-400 dark:hover:border-cyan-500 hover:shadow-lg motion-safe:hover:-translate-y-1 motion-safe:transition-all motion-safe:duration-200 cursor-default"
                 >
                   <div className="w-11 h-11 rounded-xl bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-4 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-200">
                     {c.icon}
@@ -406,7 +406,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900"
           aria-labelledby="what-heading"
         >
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div data-reveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
             <div className="relative rounded-2xl overflow-hidden h-[420px] shadow-2xl order-last md:order-first">
               <Image
                 src="/electro1.webp"
@@ -465,7 +465,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-gradient-to-b from-slate-50 to-white dark:from-gray-800 dark:to-gray-900"
           aria-labelledby="process-heading"
         >
-          <div className="max-w-7xl mx-auto">
+          <div data-reveal className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Proceso de atención
@@ -482,7 +482,7 @@ export default function ElectroterapiaBogota() {
               {/* Connector line on desktop */}
               <div className="hidden md:block absolute top-8 left-1/6 right-1/6 h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent dark:via-cyan-700 pointer-events-none" aria-hidden="true" />
 
-              {steps.map((step, i) => (
+              {steps.map((step) => (
                 <div
                   key={step.number}
                   className="relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-slate-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-cyan-300 dark:hover:border-cyan-600 transition-all duration-200"
@@ -503,10 +503,10 @@ export default function ElectroterapiaBogota() {
         {/* ── F. TRUST SECTION ─────────────────────────────────────────────── */}
         {/* Reused TrustBlock already above the fold; here we add an E-A-T detail block */}
         <section
-          className="py-16 px-6 md:px-20 bg-cyan-600 text-white"
+          className="py-16 px-6 md:px-20 bg-cyan-600 dark:bg-cyan-950 text-white transition-colors duration-300"
           aria-label="Credenciales del médico"
         >
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+          <div data-reveal className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
             {[
               { stat: '+30 años', label: 'de experiencia clínica en electroterapia' },
               { stat: 'UNAL', label: 'Médico Cirujano – Universidad Nacional de Colombia' },
@@ -525,7 +525,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900"
           aria-labelledby="local-heading"
         >
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div data-reveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
             <div>
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Ubicación
@@ -601,7 +601,7 @@ export default function ElectroterapiaBogota() {
                   src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.5466674720002!2d-74.07819023949948!3d4.639217834845287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sco!4v1750536927146!5m2!1sen!2sco"
                   width="100%"
                   height="100%"
-                  className="border-0"
+                  className="border-0 dark:[filter:invert(90%)_hue-rotate(180deg)] dark:opacity-90"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -628,7 +628,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900"
           aria-labelledby="why-heading"
         >
-          <div className="max-w-4xl mx-auto">
+          <div data-reveal className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Su elección importa
@@ -675,7 +675,7 @@ export default function ElectroterapiaBogota() {
           className="py-20 px-6 md:px-20 bg-slate-50 dark:bg-gray-800"
           aria-labelledby="faq-heading"
         >
-          <div className="max-w-3xl mx-auto">
+          <div data-reveal className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Preguntas frecuentes
@@ -688,20 +688,24 @@ export default function ElectroterapiaBogota() {
               </h2>
             </div>
 
-            <div className="space-y-5">
+            <div className="divide-y divide-slate-200 dark:divide-gray-700 border border-slate-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-gray-900 shadow-sm">
               {faqs.map(({ question, answer }) => (
-                <div
-                  key={question}
-                  className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-slate-200 dark:border-gray-700 shadow-sm"
-                >
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-cyan-100 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
-                      ?
-                    </span>
+                <details key={question} className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-semibold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-gray-800/60 transition-colors duration-150">
                     {question}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-9">{answer}</p>
-                </div>
+                    <svg
+                      className="w-5 h-5 flex-shrink-0 text-cyan-600 dark:text-cyan-400 motion-safe:transition-transform motion-safe:duration-200 group-open:rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </summary>
+                  <p className="px-6 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{answer}</p>
+                </details>
               ))}
             </div>
 
@@ -724,7 +728,7 @@ export default function ElectroterapiaBogota() {
             }}
             aria-hidden="true"
           />
-          <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+          <div data-reveal className="relative z-10 max-w-3xl mx-auto space-y-6">
             <p className="text-cyan-400 font-semibold text-sm uppercase tracking-widest">
               Comience su recuperación hoy
             </p>

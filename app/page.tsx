@@ -82,7 +82,7 @@ export default function Home() {
         <Specialties />
         {/* About the Doctor */}
         <section className="py-16 px-6 md:px-20 bg-slate-50 dark:bg-gray-800" aria-labelledby="about-heading">
-          <div className="max-w-4xl mx-auto">
+          <div data-reveal className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">
                 Médico especialista

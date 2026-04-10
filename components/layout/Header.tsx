@@ -4,19 +4,53 @@ import { useState, useEffect } from 'react';
 import { business } from '@/lib/business';
 
 const navLinks = [
-  { href: '/#experiencia', label: 'Experiencia' },
-  { href: '/#especialidades', label: 'Especialidades' },
-  { href: '/#galeria', label: 'Galería' },
-  { href: '/#contacto', label: 'Contacto' },
+  { href: '/#experiencia',   label: 'Experiencia',   id: 'experiencia' },
+  { href: '/#especialidades', label: 'Especialidades', id: 'especialidades' },
+  { href: '/#galeria',       label: 'Galería',        id: 'galeria' },
+  { href: '/#contacto',      label: 'Contacto',       id: 'contacto' },
 ];
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Lazy initializer reads from the DOM — the blocking inline script in
+  // <head> already set the `dark` class before React hydrates, so this
+  // is always correct on first render with no extra effect needed.
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return document.documentElement.classList.contains('dark');
+  });
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
+  // ── Active section scroll-spy ────────────────────────────────────
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', darkMode);
-  }, [darkMode]);
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: '-40% 0px -50% 0px' }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleDark = () => {
+    setDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle('dark', next);
+      localStorage.setItem('darkMode', String(next));
+      return next;
+    });
+  };
+
+  const linkClass = (id: string) =>
+    `transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded ${
+      activeSection === id
+        ? 'text-cyan-600 dark:text-cyan-400 font-semibold'
+        : 'hover:text-cyan-600 dark:hover:text-cyan-400'
+    }`;
 
   return (
     <header className="sticky top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-md z-50 px-6 md:px-20 py-4 flex justify-between items-center transition-colors duration-300">
@@ -26,12 +60,8 @@ export default function Header() {
 
       <div className="flex items-center gap-3">
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 dark:text-gray-300">
-          {navLinks.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded"
-            >
+          {navLinks.map(({ href, label, id }) => (
+            <a key={href} href={href} className={linkClass(id)}>
               {label}
             </a>
           ))}
@@ -46,8 +76,9 @@ export default function Header() {
           Solicitar cita
         </a>
 
+        {/* Dark mode toggle */}
         <button
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={toggleDark}
           className="flex items-center p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
           aria-label={darkMode ? 'Activar modo claro' : 'Activar modo oscuro'}
         >
@@ -62,6 +93,7 @@ export default function Header() {
           )}
         </button>
 
+        {/* Mobile hamburger */}
         <button
           className="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -74,14 +106,15 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {menuOpen && (
         <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md flex flex-col space-y-4 px-6 py-4 text-sm font-medium text-gray-700 dark:text-gray-300 md:hidden">
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, id }) => (
             <a
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+              className={linkClass(id)}
             >
               {label}
             </a>
