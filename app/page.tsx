@@ -75,7 +75,7 @@ export default function Home() {
           }),
         }}
       />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustBlock />
         <Experience />

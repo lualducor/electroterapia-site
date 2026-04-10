@@ -19,6 +19,7 @@ export default function Gallery() {
               alt="Sala de tratamiento con camilla y equipo de electroterapia – Dr. Rafael Cortés"
               width={800}
               height={600}
+              sizes="(max-width: 768px) 100vw, 560px"
               className="w-full h-full object-cover motion-safe:group-hover:scale-[1.03] motion-safe:transition-transform motion-safe:duration-500"
             />
           </div>
@@ -28,6 +29,7 @@ export default function Gallery() {
               alt="Área de consulta médica del Dr. Rafael Cortés en Bogotá"
               width={800}
               height={600}
+              sizes="(max-width: 768px) 100vw, 560px"
               className="w-full h-full object-cover motion-safe:group-hover:scale-[1.03] motion-safe:transition-transform motion-safe:duration-500"
             />
           </div>

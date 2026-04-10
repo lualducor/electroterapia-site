@@ -54,6 +54,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-md z-50 px-6 md:px-20 py-4 flex justify-between items-center transition-colors duration-300">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-cyan-600 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg"
+      >
+        Saltar al contenido principal
+      </a>
       <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
         Dr. Rafael Cortés
       </span>

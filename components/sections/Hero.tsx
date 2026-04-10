@@ -66,6 +66,7 @@ export default function Hero() {
           alt="Dr. Rafael Cortés, médico especialista en electroterapia en Bogotá"
           width={500}
           height={600}
+          sizes="(max-width: 1024px) 90vw, 500px"
           className="w-full max-w-md md:max-w-lg rounded-lg shadow-2xl"
           priority
         />

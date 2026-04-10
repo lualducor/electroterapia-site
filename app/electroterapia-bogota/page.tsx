@@ -220,6 +220,7 @@ export default function ElectroterapiaBogota() {
 
         {/* ── A. HERO ──────────────────────────────────────────────────────── */}
         <section
+          id="main-content"
           className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-950 to-slate-800 text-white"
           aria-labelledby="hero-heading"
         >
